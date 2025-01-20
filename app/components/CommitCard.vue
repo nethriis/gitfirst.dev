@@ -77,7 +77,12 @@ const startShare = async () => {
               </span>
             </NuxtLink>
             <p class="pl-1 text-xs text-zinc-600 dark:text-zinc-500">
-              authored on
+              {{
+                commit.committer.username === commit.author.username
+                  ? 'committed'
+                  : 'authored'
+              }}
+              on
               <NuxtTime
                 :datetime="commit.date"
                 locale="en"

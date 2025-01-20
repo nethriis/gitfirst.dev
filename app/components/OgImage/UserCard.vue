@@ -21,7 +21,12 @@ defineProps<{
         />
         <span class="text-4xl text-zinc-600">
           {{ commit.author.username }}
-          authored on
+          {{
+            commit.committer.username === commit.author.username
+              ? 'committed'
+              : 'authored'
+          }}
+          on
           <NuxtTime
             :datetime="commit.date"
             locale="en"
