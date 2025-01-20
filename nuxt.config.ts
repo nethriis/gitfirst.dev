@@ -6,11 +6,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4
   },
   runtimeConfig: {
-    github: {
-      token: '',
-      clientId: '',
-      clientSecret: ''
-    }
+    github: { token: '' }
   },
   $production: {
     routeRules: {
