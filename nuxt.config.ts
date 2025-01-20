@@ -8,22 +8,17 @@ export default defineNuxtConfig({
   runtimeConfig: {
     github: { token: '' }
   },
-  $production: {
-    routeRules: {
-      '/**': { isr: true }
-    }
-  },
   modules: [
-    '@nuxtjs/tailwindcss',
     '@nuxt/fonts',
-    'nuxt-time',
-    '@nuxt/image',
     '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
     '@vueuse/nuxt',
-    '@nuxtjs/color-mode'
+    'nuxt-time'
   ],
   icon: {
     mode: 'svg',
-    collections: ['radix-icons']
+    collections: ['carbon']
   }
 })
