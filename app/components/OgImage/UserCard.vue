@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div
-    class="font-sans px-16 py-24 flex flex-col justify-between w-full h-full"
+    class="font-sans px-16 py-24 flex flex-col justify-between w-full h-full bg-white"
   >
     <div class="flex flex-col gap-y-8">
       <span class="text-6xl text-zinc-950 font-bold line-clamp-1">
