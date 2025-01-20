@@ -14,11 +14,18 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
+    '@nuxtjs/sitemap',
     '@vueuse/nuxt',
+    'nuxt-og-image',
     'nuxt-time'
   ],
+  site: {
+    url: 'https://gitfirst.dev'
+  },
   icon: {
-    mode: 'svg',
-    collections: ['carbon']
+    mode: 'svg'
+  },
+  ogImage: {
+    fonts: ['Sora:400', 'Sora:600', 'Sora:700']
   }
 })

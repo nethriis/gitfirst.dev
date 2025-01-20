@@ -1,10 +1,20 @@
 <script setup lang="ts">
 const route = useRoute('username')
 
+useSeoMeta({ title: `gitfirst.dev - @${route.params.username}` })
+useServerSeoMeta({
+  ogTitle: `gitfirst.dev - @${route.params.username}`,
+  twitterTitle: `gitfirst.dev - @${route.params.username}`,
+  description: `Explore the origins of @${route.params.username}'s open-source contributions.`,
+  ogDescription: `Explore the origins of @${route.params.username}'s open-source contributions.`
+})
+
 const { data: commit, error } = await useFetch(
   `/api/commit/${route.params.username}`,
   { lazy: true }
 )
+
+defineOgImageComponent('UserCard', { commit })
 
 const errorMessage = computed(() => {
   if (error.value) {

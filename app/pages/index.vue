@@ -1,4 +1,14 @@
 <script setup lang="ts">
+defineOgImageComponent('Home')
+
+useSeoMeta({ title: 'gitfirst.dev' })
+useServerSeoMeta({
+  ogTitle: 'gitfirst.dev',
+  twitterTitle: 'gitfirst.dev',
+  description: 'Explore the origins of open-source contributions.',
+  ogDescription: 'Explore the origins of open-source contributions.'
+})
+
 const username = ref('')
 </script>
 
