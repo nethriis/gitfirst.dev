@@ -4,7 +4,6 @@ const colorMode = useColorMode()
 const toggleColorMode = () => {
   if (colorMode.value === 'undefined' || colorMode.value === 'light') {
     colorMode.preference = 'dark'
-    console.log('preference', colorMode.preference)
   } else if (colorMode.value === 'dark') {
     colorMode.preference = 'light'
   }
