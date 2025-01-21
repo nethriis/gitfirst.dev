@@ -1,3 +1,5 @@
+import { emojify } from 'node-emoji'
+
 export default defineEventHandler(async (event) => {
   const username = getRouterParam(event, 'username')
 
@@ -34,7 +36,7 @@ export default defineEventHandler(async (event) => {
     date: commits[0].commit.author.date,
     link: commits[0].html_url,
     sha: commits[0].sha,
-    message: commits[0].commit.message,
+    message: emojify(commits[0].commit.message),
     author: {
       avatar: user.value?.avatar_url,
       name: user.value?.name,

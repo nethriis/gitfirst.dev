@@ -2,13 +2,6 @@ import type { FetchOptions } from 'ofetch'
 
 const config = useRuntimeConfig()
 
-const cacheOptions = (name: string) => ({
-  name,
-  group: 'gh',
-  maxAge: 60 * 60 * 6,
-  staleMaxAge: 60 * 60 * 12
-})
-
 export const ghFetch: <T = any>(
   path: string,
   opts?: FetchOptions
@@ -20,12 +13,17 @@ export const ghFetch: <T = any>(
       headers: {
         Authorization: `Bearer ${config.github.token}`,
         'X-GitHub-Api-Version': '2022-11-28',
-        'User-Agent': 'GitFirst',
+        'User-Agent': 'gitfirst.dev',
         Accept: 'application/vnd.github+json',
         ...opts.headers
       },
       query: opts.query
     })
   },
-  cacheOptions('api')
+  {
+    name: 'api',
+    group: 'gh',
+    maxAge: 60 * 60 * 6,
+    staleMaxAge: 60 * 60 * 12
+  }
 )

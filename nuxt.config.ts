@@ -23,9 +23,13 @@ export default defineNuxtConfig({
     url: 'https://gitfirst.dev'
   },
   icon: {
-    mode: 'svg'
+    mode: 'svg',
+    collections: ['carbon']
   },
   ogImage: {
+    defaults: {
+      emojis: 'fluent-emoji'
+    },
     fonts: ['Sora:400', 'Sora:600', 'Sora:700']
   }
 })

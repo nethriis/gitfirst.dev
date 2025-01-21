@@ -9,9 +9,9 @@ defineProps<{
     class="font-sans px-16 py-24 flex flex-col justify-between w-full h-full bg-white"
   >
     <div class="flex flex-col gap-y-8">
-      <span class="text-6xl text-zinc-950 font-bold line-clamp-1">
+      <p class="text-6xl text-zinc-950 font-bold line-clamp-1">
         {{ commit.message }}
-      </span>
+      </p>
       <div class="flex items-center gap-x-8">
         <NuxtImg
           :src="commit.author.avatar"

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { emojify } from 'node-emoji'
-
 const { copy, copied, isSupported: isClipboardSupported } = useClipboard()
 const { share, isSupported: isShareSupported } = useShare()
 const route = useRoute()
@@ -45,7 +43,7 @@ const startShare = async () => {
         >
           <template v-if="commit">
             <span class="leading-tight line-clamp-1">
-              {{ emojify(commit.message) }}
+              {{ commit.message }}
             </span>
             <NuxtImg
               v-if="commit.committer.username !== commit.author.username"
