@@ -2,7 +2,13 @@
 
 > Explore the origins of open-source contributions with ease.
 
-- Live at [gitfirst.dev](https://gitfirst.dev)
+<p align="center">
+	<a href="https://gitfirst.dev/" target="_blank">
+		<img width="1080" alt="Screenshot of @nethriis's first commit." src="https://github.com/user-attachments/assets/1a3d8325-0910-4e7c-9205-033189750d25" />
+	</a>
+</p>
+
+🌐 Live at [gitfirst.dev](https://gitfirst.dev)
 
 ## Features
 
