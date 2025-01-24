@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Analytics } from '@vercel/analytics/nuxt'
+
 const colorMode = useColorMode()
 
 const favicon = computed(() =>
@@ -12,6 +14,7 @@ useFavicon(favicon)
 
 <template>
   <NuxtLayout>
+    <Analytics />
     <NuxtPage />
   </NuxtLayout>
 </template>
