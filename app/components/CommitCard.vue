@@ -74,7 +74,9 @@ const startShare = async () => {
                 {{ commit.author.username }}
               </span>
             </NuxtLink>
-            <p class="pl-1 text-xs text-zinc-600 dark:text-zinc-500">
+            <p
+              class="pl-1 text-xs text-zinc-600 dark:text-zinc-500 line-clamp-1"
+            >
               {{
                 commit.committer.username === commit.author.username
                   ? 'committed'
