@@ -12,7 +12,7 @@
     "format:write": "prettier --write ."
   },
   "dependencies": {
-    "@iconify-json/carbon": "^1.2.5",
+    "@iconify-json/carbon": "^1.2.8",
     "@nuxt/fonts": "0.10.3",
     "@nuxt/icon": "1.10.3",
     "@nuxt/image": "1.9.0",
